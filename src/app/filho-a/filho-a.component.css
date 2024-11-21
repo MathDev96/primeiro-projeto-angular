@@ -1,0 +1,9 @@
+* {
+    color: greenyellow;
+}
+:host{
+    border: 1px solid greenyellow;
+    display: inline-block;
+    padding: 15px;
+    margin: 5px;
+}

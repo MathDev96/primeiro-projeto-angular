@@ -1,0 +1,38 @@
+<div class="weather-container" [ngClass]="getBackgroundClass()">
+  
+  <form [formGroup]="locationsForm" (ngSubmit)="obterRegioes()">
+      <label for="city">Escolha a Cidade</label>
+      <input type="text" id="city" formControlName="city" required>
+
+      <!-- Botão de buscar local, desabilitado se o usuário estiver usando a localização atual -->
+      <button type="submit" class="button vermelho" [disabled]="!locationsForm.valid || usingCurrentLocation">Buscar Local</button>
+
+      <!-- Botão de usar localização atual -->
+      <button class="button verde" (click)="obterLocalizacaoAtual()">Usar Minha Localização Atual</button>
+  </form>
+
+  <!-- Exibe a cidade atual se ela existir -->
+  <div *ngIf="currentCity">
+    <h3>Clima Atual em: {{currentCity}}</h3>
+  </div>
+
+  <!-- Exibe a lista de locais encontrados se "locations" estiver preenchido e "usingCurrentLocation" for falso -->
+  <div *ngIf="locations && !usingCurrentLocation" class="locations">
+    <div 
+      class="location" 
+      (click)="obterClima(location)" 
+      [ngClass]="selectedLocation === location ? 'active' : ''" 
+      *ngFor="let location of locations; let i = index">
+      {{location.name}} - {{location.state}}
+    </div>
+  </div>
+
+  <!-- Exibe os dados do clima se "weatherData" estiver preenchido -->
+  <div *ngIf="weatherData">
+    <p>Clima: {{weatherData.weather[0].description}}</p>
+    <p>Temperatura: {{weatherData.main.temp}} C°</p>
+    <p>Umidade do ar: {{weatherData.main.humidity}}%</p>
+    <p>Sensação térmica: {{weatherData.main.feels_like}} C°</p>
+    <p><img src="{{'http://openweathermap.org/img/w/' + weatherData.weather[0].icon + '.png'}}"></p>
+  </div>
+</div>

@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: sans-serif;
+    
+}
+
+h1 {
+    font-size: 18px;
+    color: brown;
+}
+
+p {
+    font-size: 18px;
+}
+.button {
+    border: 0;
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.button:disabled{
+    background-color: #c9c9c9;
+    cursor: default;
+}
+
+.vermelho {
+    background-color: brown;
+}
+
+.verde {
+    background-color: rgb(14, 194, 14);
+}
+
+input[type=text],[type=number], select {
+    height: 26px;
+    border-radius: 15px;
+    border: 1px solid #b8b8b8;
+    margin-bottom: 5px;
+    padding: 0 15px;
+}
+
+

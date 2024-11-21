@@ -1,0 +1,137 @@
+
+
+.locations .location {
+    background-color: rgba(38, 5, 226, 0.575);
+    padding: 15px;
+    margin: 15px;
+    border-radius: 35px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    
+}
+
+.locations .location.active {
+    background: brown;
+    
+}
+
+.locations .location:hover {
+    background: brown;
+}
+
+form input[type=text], button {
+    margin: 5px;
+    display: flex;
+}
+h2, h3, p, label {
+    color: darkblue;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+.weather-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.weather-container div, form {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: inset 0px 0px 10px rgb(255, 253, 253);
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    text-align: center;
+
+}
+
+
+.clear {
+    object-fit: cover;
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    border-radius: 10px;
+    transform: scale(1);
+    transform-origin: center;
+    background-image: url('/assets/clear.gif'); /* Fundo para clima limpo */
+}
+
+.clouds {
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transform: scale(1);
+    object-fit: cover;
+    border-radius: 10px;
+    transform-origin: center;
+    background-image: url('/assets/clouds.gif'); 
+
+}
+
+.rain {
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transform: scale(1);
+    transform-origin: center;
+    object-fit: cover;
+    background-image: url('/assets/rain.gif'); /* Fundo para chuva */
+    border-radius: 10px;
+}
+
+.snow {
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transform: scale(1);
+    transform-origin: center;
+    object-fit: cover;
+    border-radius: 10px;
+    background-image: url('/assets/snow.gif'); /* Fundo para neve */
+}
+
+.thunderstorm {
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 100vh;
+    transform: scale(1);
+    transform-origin: center;
+    border-radius: 10px;
+    background-image: url('/assets/storm.gif'); /* Fundo para 
+    tempestade */
+}
+
+.default {
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 100vh;
+    transform: scale(1);
+    transform-origin: center;
+    background-image: url('/assets/default.gif'); 
+    border-radius: 10px;
+
+}
+.mist {
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transform: scale(1);
+    transform-origin: center;
+    object-fit: cover;
+    border-radius: 10px;
+    background-image: url('/assets/snow.gif')
+}
+

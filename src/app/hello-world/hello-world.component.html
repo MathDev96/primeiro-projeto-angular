@@ -1,0 +1,35 @@
+<h1>Meu primeiro Hello World em Angular !</h1>
+
+<p>Esse é o template Filho</p>
+
+<app-filho-a [texto]="textoVaiProFilho"(textoPreenchido)="textoRecebido = $event"></app-filho-a>
+<app-filho-b></app-filho-b>
+
+<p>
+    <label for="caixaPai">Digite o texto que vai para o componente filho: </label>
+    <input type="text" id="caixaPai" #caixaPai>
+    <button (click)="textoVaiProFilho = caixaPai.value">
+        Enviar
+    </button>
+</p>
+
+<p *ngIf="textoRecebido">Esse texto veio do filho: {{ textoRecebido}}</p>
+
+<p>
+    <a href="/">Home</a>
+
+</p>
+
+<p>
+    <a routerLink="filho-a">Filho A</a>
+</p>
+
+<p>
+    <a routerLink="filho-b">Filho B</a>
+</p>
+
+
+<p>Para acessar o Data Binding clique aqui: <input type="checkbox" [checked]="podeAcessar"
+        (change)="alterarAcesso($event)"></p>
+
+<router-outlet />

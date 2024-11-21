@@ -1,0 +1,8 @@
+<h2>Template dentro do hello world - filho-a</h2>
+<p *ngIf="texto">Esse texto veio do componente Pai: {{ texto }}</p>
+
+<p>
+    <label for="caixaFilha" ></label>
+    <input type="text" id="caixaFilha" #caixaFilha>
+    <button (click)="enviar(caixaFilha.value)">Enviar par ao Pai</button>
+</p>

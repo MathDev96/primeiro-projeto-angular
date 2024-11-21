@@ -1,0 +1,38 @@
+<h2>Pipes</h2>
+
+<h3>Datas</h3>
+
+<p> <b>Data:</b> {{ date | date }}</p>
+
+
+<p> <b>Data com horário:</b> {{ date | date:'medium'}}</p>
+
+<p> <b>Horário:</b> {{date | date:'shortTime'}}</p>
+
+<p> <b>Horário com segundos:</b> {{ date | date:'HH:mm:ss'}}</p>
+
+<p> <b>Data e horário com numéricos:</b> {{ date | date:'dd MM yyyy HH:mm'}}</p>
+
+<h3>Textos</h3>
+
+<label>Nome: </label>
+<input type="text" #name (keyup)="changeName(name.value)">
+
+<p>Em minúsculo : {{nameText | lowercase}}</p>
+<p>Em maiúsculo : {{nameText | uppercase}}</p>
+
+<h3>Moedas</h3>
+
+<p>{{ value | currency }}</p>
+
+<p>{{ value | currency: 'BRL' }}</p>
+
+
+<h3>Números Decimais</h3>
+
+<p>Sem pipes: {{pi}}</p>
+
+<p>Com pipes: {{pi | number }}</p>
+
+<p>Especificando quantidade de dígitos: {{pi | number:'1.1-6' }}</p>
+
