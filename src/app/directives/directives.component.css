@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    background-color: rgba(32, 27, 27, 0.781);
 }
 
 .backgroundgray {

@@ -1,8 +1,10 @@
-*{
+body{
     font-family: sans-serif;
-    
+    background-color: rgb(28, 28, 139);
 }
-
+* {
+    margin: 5px;
+}
 h1 {
     font-size: 18px;
     color: brown;
